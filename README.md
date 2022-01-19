@@ -5,4 +5,7 @@ También permite el login mediante Facebook.
 
 ### Run
 
-$ npm start
+$  node index.js -p {PORT_NUMBER}
+
+
+Para selección del puerto mediante arg: -p {PORT_NUMBER}

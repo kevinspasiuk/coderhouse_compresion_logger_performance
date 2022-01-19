@@ -2,12 +2,12 @@ const express = require('express');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const passport = require('passport');
+const parseArgs = require('minimist');
 const { Strategy: FacebookStrategy } = require('passport-facebook');
-
-
 const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true};
 
-
+const args = parseArgs(process.argv.slice(2), {alias: {p: 'PUERTO'} });
+const PORT = args.PUERTO || 8080
 const app = express();
 
 app.use(session({
@@ -15,7 +15,7 @@ app.use(session({
       mongoUrl: 'mongodb+srv://admin:admin@clusterkevin.uq0gf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
       mongoOptions: advancedOptions    
     }),
-    secret: 'shhhhhhhhhhhhhhhhhhhhh',
+    secret: `${process.env.SESSION_SECRET}`,
     resave: false,
     saveUninitialized: false,
     cookie: {
@@ -23,9 +23,11 @@ app.use(session({
     }
 }));
 
-const FACEBOOK_CLIENT_ID = '260685306032241';
-const FACEBOOK_CLIENT_SECRET = '38560ef88d209f9aca142f7e213eab22';
-const PORT = 8080
+require('dotenv').config();
+const FACEBOOK_CLIENT_ID = process.env.FB_CLIENT_ID ;
+const FACEBOOK_CLIENT_SECRET = process.env.FB_CLIENT_SECRET;
+
+
 
 passport.use(new FacebookStrategy({
     clientID: FACEBOOK_CLIENT_ID,
@@ -106,6 +108,21 @@ app.post('/logout', (req, res) => {
         }
       })
 })
+
+app.get('/info', (req, res) => {
+  res.send({info: {
+    argumentos: process.argv,
+    os: process.platform,
+    node_ver: process.version,
+    uso_memoria: process.memoryUsage(), 
+    path_ejecucion: process.cwd(),
+    process_id: process.pid,
+    project_folder: process.title
+  }});
+})
+
+const randomRouter = require('./routes/random');
+app.use('/api/randoms',randomRouter)
 
 app.listen(PORT, () => {
   console.log(`Servidor express escuchando en el puerto ${PORT}`)
