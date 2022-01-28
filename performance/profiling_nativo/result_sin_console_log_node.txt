@@ -1,0 +1,556 @@
+Statistical profiling result from result_sin_consolelog_info.log, (1452 ticks, 2 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   1205   83.0%          /home/kevin/.nvm/versions/node/v14.17.6/bin/node
+     28    1.9%          /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      1    0.1%          [vdso]
+      1    0.1%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      5    0.3%    2.3%  LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      3    0.2%    1.4%  LazyCompile: *resolve path.js:1067:10
+      2    0.1%    0.9%  RegExp: ^\s*([^;\s]*)(?:;|\s|$)
+      2    0.1%    0.9%  LazyCompile: *nextTick internal/process/task_queues.js:103:18
+      2    0.1%    0.9%  LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+      2    0.1%    0.9%  LazyCompile: *hidden internal/errors.js:306:25
+      1    0.1%    0.5%  RegExp: ^\/logout\/?$
+      1    0.1%    0.5%  RegExp: ^((?:(?:[0-9a-fA-F]{1,4}):){7}(?:(?:[0-9a-fA-F]{1,4})|:)|(?:(?:[0-9a-fA-F]{1,4}):){6}(?:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|:(?:[0-9a-fA-F]{1,4})|:)|(?:(?:[0-9a-fA-F]{1,4}):){5}(?::((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,2}|:)|(?:(?:[0-9a-fA-F]{1,4}):){4}(?:(:(?:[0-9a-fA-F]{1,4})){0,1}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,3}|:)|(?:(?:[0-9a-fA-F]{1,4}):){3}(?:(:(?:[0-9a-fA-F]{1,4})){0,2}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,4}|:)|(?:(?:[0-9a-fA-F]{1,4}):){2}(?:(:(?:[0-9a-fA-F]{1,4})){0,3}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,5}|:)|(?:(?:[0-9a-fA-F]{1,4}):){1}(?:(:(?:[0-9a-fA-F]{1,4})){0,4}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(:(?:[0-9a-fA-F]{1,4})){1,6}|:)|(?::((?::(?:[0-9a-fA-F]{1,4})){0,5}:((?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])[.]){3}(?:[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])|(?::(?:[0-9a-fA-F]{1,4})){1,7}|:)))(%[0-9a-zA-Z-.:]{1,})?$
+      1    0.1%    0.5%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.1%    0.5%  RegExp: (?:^|[\\/])\.\.(?:[\\/]|$)
+      1    0.1%    0.5%  LazyCompile: *writeOrBuffer internal/streams/writable.js:334:23
+      1    0.1%    0.5%  LazyCompile: *realpathSync fs.js:1718:22
+      1    0.1%    0.5%  LazyCompile: *normalizeString path.js:59:25
+      1    0.1%    0.5%  LazyCompile: *hasHooks internal/async_hooks.js:441:18
+      1    0.1%    0.5%  LazyCompile: *handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      1    0.1%    0.5%  LazyCompile: *get /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/log4js/node_modules/debug/src/common.js:125:9
+      1    0.1%    0.5%  LazyCompile: *emit events.js:349:44
+      1    0.1%    0.5%  LazyCompile: *dirname path.js:1247:10
+
+ [C++]:
+   ticks  total  nonlib   name
+     97    6.7%   44.7%  epoll_pwait
+     30    2.1%   13.8%  __write
+     17    1.2%    7.8%  fwrite
+      5    0.3%    2.3%  epoll_ctl
+      5    0.3%    2.3%  __libc_malloc
+      5    0.3%    2.3%  __GI___pthread_mutex_unlock
+      4    0.3%    1.8%  _IO_file_xsputn
+      3    0.2%    1.4%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      3    0.2%    1.4%  operator new(unsigned long)
+      2    0.1%    0.9%  do_futex_wait.constprop.0
+      2    0.1%    0.9%  __pthread_cond_timedwait
+      2    0.1%    0.9%  __mprotect
+      1    0.1%    0.5%  std::ostream::sentry::sentry(std::ostream&)
+      1    0.1%    0.5%  std::ostream::flush()
+      1    0.1%    0.5%  std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
+      1    0.1%    0.5%  operator delete(void*)
+      1    0.1%    0.5%  brk
+      1    0.1%    0.5%  __pthread_cond_wait
+      1    0.1%    0.5%  __pthread_cond_signal
+      1    0.1%    0.5%  __madvise
+      1    0.1%    0.5%  __libc_read
+      1    0.1%    0.5%  __clock_gettime
+      1    0.1%    0.5%  __GI___pthread_mutex_lock
+      1    0.1%    0.5%  __GI___pthread_getspecific
+
+ [Summary]:
+   ticks  total  nonlib   name
+     28    1.9%   12.9%  JavaScript
+    187   12.9%   86.2%  C++
+     41    2.8%   18.9%  GC
+   1235   85.1%          Shared libraries
+      2    0.1%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     18   34.0%    1.2%  __write
+     14   26.4%    1.0%  fwrite
+      4    7.5%    0.3%  __libc_malloc
+      4    7.5%    0.3%  _IO_file_xsputn
+      3    5.7%    0.2%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)
+      3    5.7%    0.2%  operator new(unsigned long)
+      1    1.9%    0.1%  std::ostream::flush()
+      1    1.9%    0.1%  std::_Rb_tree_decrement(std::_Rb_tree_node_base*)
+      1    1.9%    0.1%  operator delete(void*)
+      1    1.9%    0.1%  brk
+      1    1.9%    0.1%  __mprotect
+      1    1.9%    0.1%  __madvise
+      1    1.9%    0.1%  __GI___pthread_mutex_unlock
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   1205   83.0%  /home/kevin/.nvm/versions/node/v14.17.6/bin/node
+    675   56.0%    /home/kevin/.nvm/versions/node/v14.17.6/bin/node
+     71   10.5%      LazyCompile: ~wrapSafe internal/modules/cjs/loader.js:973:18
+     71  100.0%        LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1026:37
+     71  100.0%          LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1081:37
+     71  100.0%            LazyCompile: ~Module.load internal/modules/cjs/loader.js:925:33
+     66    9.8%      LazyCompile: ~memoryUsage internal/process/per_thread.js:152:23
+     66  100.0%        LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/index.js:148:20
+     50   75.8%          LazyCompile: *handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+     50  100.0%            LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+     16   24.2%          LazyCompile: ~handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+     10   62.5%            LazyCompile: ~next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+      6   37.5%            LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+     42    6.2%      LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+     37   88.1%        LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+      4   10.8%          Eval: ~<anonymous> crypto.js:1:1
+      4  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    5.4%          LazyCompile: ~setupPrepareStackTrace internal/bootstrap/node.js:254:32
+      2  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      2    5.4%          Eval: ~<anonymous> tls.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    5.4%          Eval: ~<anonymous> stream.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    5.4%          Eval: ~<anonymous> internal/modules/esm/loader.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      2    5.4%          Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      2    5.4%          Eval: ~<anonymous> events.js:1:1
+      2  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          LazyCompile: ~setupBuffer internal/bootstrap/node.js:302:21
+      1  100.0%            Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    2.7%          LazyCompile: ~initializeCJSLoader internal/bootstrap/pre_execution.js:426:29
+      1  100.0%            LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:21:36
+      1    2.7%          LazyCompile: ~get dns.js:328:8
+      1  100.0%            /home/kevin/.nvm/versions/node/v14.17.6/bin/node
+      1    2.7%          Eval: ~<anonymous> url.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          Eval: ~<anonymous> tty.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          Eval: ~<anonymous> net.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          Eval: ~<anonymous> internal/url.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          Eval: ~<anonymous> internal/timers.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          Eval: ~<anonymous> internal/streams/pipeline.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          Eval: ~<anonymous> internal/source_map/source_map_cache.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          Eval: ~<anonymous> internal/process/task_queues.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          Eval: ~<anonymous> internal/modules/esm/get_source.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          Eval: ~<anonymous> internal/modules/cjs/loader.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          Eval: ~<anonymous> internal/console/global.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          Eval: ~<anonymous> internal/cluster/master.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          Eval: ~<anonymous> internal/child_process.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          Eval: ~<anonymous> http.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          Eval: ~<anonymous> child_process.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          Eval: ~<anonymous> buffer.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          Eval: ~<anonymous> _http_common.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1    2.7%          Eval: ~<anonymous> _http_client.js:1:1
+      1  100.0%            LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      5   11.9%        LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:220:25
+      5  100.0%          LazyCompile: ~loadNativeModule internal/modules/cjs/helpers.js:35:26
+      5  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:724:24
+     35    5.2%      /home/kevin/.nvm/versions/node/v14.17.6/bin/node
+      5   14.3%        LazyCompile: ~pipe /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/send/index.js:510:43
+      5  100.0%          LazyCompile: ~serveStatic /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/serve-static/index.js:72:31
+      3   60.0%            LazyCompile: *handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      2   40.0%            LazyCompile: ~handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      3    8.6%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:257:21
+      3  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:288:26
+      3  100.0%            LazyCompile: ~trySelf internal/modules/cjs/loader.js:408:17
+      2    5.7%        LazyCompile: ~stat internal/modules/cjs/loader.js:145:14
+      1   50.0%          LazyCompile: ~tryFile internal/modules/cjs/loader.js:351:17
+      1  100.0%            LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:367:23
+      1   50.0%          LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:804:35
+      2    5.7%        LazyCompile: ~header /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/response.js:754:29
+      2  100.0%          LazyCompile: ~send /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/response.js:107:25
+      2  100.0%            LazyCompile: ~json /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/response.js:239:25
+      2    5.7%        LazyCompile: ~format /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/content-type/index.js:65:17
+      2  100.0%          LazyCompile: ~setCharset /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/utils.js:250:41
+      2  100.0%            LazyCompile: ~send /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/response.js:107:25
+      2    5.7%        LazyCompile: ~expressInit /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/middleware/init.js:29:30
+      1   50.0%          LazyCompile: ~handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      1   50.0%          LazyCompile: *handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      2    5.7%        LazyCompile: ~asString /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/date-format/lib/index.js:29:18
+      2  100.0%          LazyCompile: ~timestampLevelAndCategory /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/log4js/lib/layouts.js:41:35
+      2  100.0%            LazyCompile: ~colouredLayout /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/log4js/lib/layouts.js:70:24
+      2    5.7%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+      2  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:804:35
+      2  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:724:24
+      2    5.7%        LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      2  100.0%          LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+      2  100.0%            LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+      1    2.9%        LazyCompile: ~populateMaps /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mime-types/index.js:154:23
+      1  100.0%          Eval: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mime-types/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1026:37
+      1    2.9%        LazyCompile: ~parseHost url.js:962:45
+      1  100.0%          LazyCompile: ~parse url.js:169:37
+      1  100.0%            LazyCompile: ~urlParse url.js:153:18
+      1    2.9%        LazyCompile: ~match /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:110:39
+      1  100.0%          LazyCompile: ~matchLayer /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:572:20
+      1  100.0%            LazyCompile: ~next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      1    2.9%        LazyCompile: ~hash /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express-session/index.js:596:14
+      1  100.0%          LazyCompile: ~generate /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express-session/index.js:363:22
+      1  100.0%            LazyCompile: ~session /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express-session/index.js:179:26
+      1    2.9%        LazyCompile: ~finalizeEsmResolution internal/modules/cjs/loader.js:895:31
+      1  100.0%          LazyCompile: ~resolveExports internal/modules/cjs/loader.js:439:24
+      1  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+      1    2.9%        LazyCompile: ~createClientErrorConstructor /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/http-errors/index.js:132:39
+      1  100.0%          LazyCompile: ~forEachCode /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/http-errors/index.js:243:38
+      1  100.0%            /home/kevin/.nvm/versions/node/v14.17.6/bin/node
+      1    2.9%        LazyCompile: ~command /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connection.js:161:12
+      1  100.0%          LazyCompile: ~continueScramConversation /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/auth/scram.js:93:35
+      1  100.0%            LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/auth/scram.js:85:80
+      1    2.9%        LazyCompile: ~checkServer /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/monitor.js:138:21
+      1  100.0%          LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/monitor.js:222:12
+      1  100.0%            LazyCompile: ~executeAndReschedule /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/utils.js:786:34
+      1    2.9%        LazyCompile: ~checkInvalidHeaderChar _http_common.js:230:32
+      1  100.0%          LazyCompile: ~<anonymous> _http_outgoing.js:549:45
+      1  100.0%            LazyCompile: *hidden internal/errors.js:306:25
+      1    2.9%        LazyCompile: ~FastBuffer internal/buffer.js:955:14
+      1  100.0%          LazyCompile: ~alloc buffer.js:369:30
+      1  100.0%            LazyCompile: ~serialize /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/bson/lib/bson.js:111:19
+      1    2.9%        LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/dotenv/lib/main.js:20:57
+      1  100.0%          /home/kevin/.nvm/versions/node/v14.17.6/bin/node
+      1  100.0%            LazyCompile: ~parse /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/dotenv/lib/main.js:15:16
+      1    2.9%        Eval: ~<anonymous> zlib.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:220:25
+      1    2.9%        Eval: ~<anonymous> internal/util/inspect.js:1:1
+      1  100.0%          LazyCompile: ~compileForInternalLoader internal/bootstrap/loaders.js:273:27
+      1  100.0%            LazyCompile: ~nativeModuleRequire internal/bootstrap/loaders.js:306:29
+     22    3.3%      LazyCompile: ~writevGeneric internal/stream_base_commons.js:118:23
+     22  100.0%        LazyCompile: ~Socket._writeGeneric net.js:761:42
+     22  100.0%          LazyCompile: ~Socket._writev net.js:793:36
+     22  100.0%            LazyCompile: ~doWrite internal/streams/writable.js:367:17
+     19    2.8%      LazyCompile: ~compression /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/compression/index.js:59:31
+     15   78.9%        LazyCompile: *handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+     15  100.0%          LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+     15  100.0%            LazyCompile: ~expressInit /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/middleware/init.js:29:30
+      4   21.1%        LazyCompile: ~handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      4  100.0%          LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      4  100.0%            LazyCompile: ~expressInit /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/middleware/init.js:29:30
+     19    2.8%      LazyCompile: ~authenticate /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/passport/lib/middleware/authenticate.js:94:31
+     13   68.4%        LazyCompile: *handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+     13  100.0%          LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+     13  100.0%            LazyCompile: ~initialize /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/passport/lib/middleware/initialize.js:51:29
+      6   31.6%        LazyCompile: ~handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      5   83.3%          LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      5  100.0%            LazyCompile: ~initialize /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/passport/lib/middleware/initialize.js:51:29
+      1   16.7%          LazyCompile: ~trim_prefix /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:288:23
+      1  100.0%            LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:275:64
+     14    2.1%      LazyCompile: ~stat fs.js:1073:14
+     14  100.0%        LazyCompile: ~sendFile /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/send/index.js:716:51
+     14  100.0%          LazyCompile: ~pipe /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/send/index.js:510:43
+     14  100.0%            LazyCompile: ~serveStatic /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/serve-static/index.js:72:31
+     13    1.9%      LazyCompile: ~pbkdf2Sync internal/crypto/pbkdf2.js:44:20
+     13  100.0%        LazyCompile: ~HI /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/auth/scram.js:227:12
+     13  100.0%          LazyCompile: ~continueScramConversation /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/auth/scram.js:93:35
+     13  100.0%            LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/auth/scram.js:85:80
+     12    1.8%      LazyCompile: ~Hash internal/crypto/hash.js:37:14
+     12  100.0%        LazyCompile: ~createHash crypto.js:115:20
+      8   66.7%          LazyCompile: ~hash /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express-session/index.js:596:14
+      5   62.5%            LazyCompile: ~isModified /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express-session/index.js:425:24
+      3   37.5%            LazyCompile: ~generate /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express-session/index.js:363:22
+      4   33.3%          LazyCompile: ~entitytag /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/etag/index.js:39:20
+      4  100.0%            LazyCompile: ~etag /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/etag/index.js:70:15
+     11    1.6%      LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      5   45.5%        LazyCompile: ~urlencodedParser /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/body-parser/lib/types/urlencoded.js:79:36
+      3   60.0%          LazyCompile: ~handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      3  100.0%            LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      2   40.0%          LazyCompile: *handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      2  100.0%            LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      3   27.3%        LazyCompile: ~session /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express-session/index.js:179:26
+      2   66.7%          LazyCompile: *handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      2  100.0%            LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      1   33.3%          LazyCompile: ~handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      2   18.2%        LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+      2  100.0%          LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+      2  100.0%            LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+      1    9.1%        LazyCompile: ~handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:136:31
+      1  100.0%          LazyCompile: ~handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/application.js:158:29
+      1  100.0%            LazyCompile: ~app /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/express.js:38:21
+     10    1.5%      LazyCompile: ~expressInit /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/middleware/init.js:29:30
+      7   70.0%        LazyCompile: *handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      7  100.0%          LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      7  100.0%            LazyCompile: ~query /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/middleware/query.js:39:24
+      3   30.0%        LazyCompile: ~handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      2   66.7%          LazyCompile: ~trim_prefix /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:288:23
+      2  100.0%            LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:275:64
+      1   33.3%          LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      1  100.0%            LazyCompile: ~query /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/middleware/query.js:39:24
+      9    1.3%      LazyCompile: ~send /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/response.js:107:25
+      5   55.6%        LazyCompile: ~json /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/response.js:239:25
+      5  100.0%          LazyCompile: ~send /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/response.js:107:25
+      5  100.0%            LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/index.js:148:20
+      4   44.4%        LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/index.js:148:20
+      3   75.0%          LazyCompile: *handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      3  100.0%            LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+      1   25.0%          LazyCompile: ~handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%            LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+      8    1.2%      LazyCompile: ~session /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express-session/index.js:179:26
+      4   50.0%        LazyCompile: ~handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      3   75.0%          LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      3  100.0%            LazyCompile: ~compression /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/compression/index.js:59:31
+      1   25.0%          LazyCompile: ~trim_prefix /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:288:23
+      1  100.0%            LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:275:64
+      4   50.0%        LazyCompile: *handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      4  100.0%          LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      4  100.0%            LazyCompile: ~compression /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/compression/index.js:59:31
+      8    1.2%      LazyCompile: ~handleWriteReq internal/stream_base_commons.js:47:24
+      8  100.0%        LazyCompile: ~writeGeneric internal/stream_base_commons.js:143:22
+      6   75.0%          LazyCompile: ~Socket._writeGeneric net.js:761:42
+      6  100.0%            LazyCompile: ~Socket._write net.js:798:35
+      2   25.0%          LazyCompile: *writeOrBuffer internal/streams/writable.js:334:23
+      2  100.0%            LazyCompile: ~Writable.write internal/streams/writable.js:258:36
+      7    1.0%      LazyCompile: ~stat internal/modules/cjs/loader.js:145:14
+      4   57.1%        LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+      4  100.0%          LazyCompile: ~Module._resolveFilename internal/modules/cjs/loader.js:804:35
+      4  100.0%            LazyCompile: ~Module._load internal/modules/cjs/loader.js:724:24
+      3   42.9%        LazyCompile: ~tryFile internal/modules/cjs/loader.js:351:17
+      3  100.0%          LazyCompile: ~tryExtensions internal/modules/cjs/loader.js:367:23
+      3  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+      7    1.0%      LazyCompile: ~randomBytes internal/crypto/random.js:65:21
+      5   71.4%        LazyCompile: ~randomBytesSync /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/random-bytes/index.js:72:25
+      5  100.0%          LazyCompile: ~uidSync /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/uid-safe/index.js:75:18
+      5  100.0%            LazyCompile: ~generateSessionId /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express-session/index.js:518:27
+      1   14.3%        LazyCompile: ~uuidV4 /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/utils.js:522:16
+      1  100.0%          LazyCompile: ~ServerSession /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sessions.js:524:16
+      1  100.0%            LazyCompile: ~acquire /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sessions.js:577:12
+      1   14.3%        LazyCompile: ~prepare /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/auth/scram.js:16:12
+      1  100.0%          LazyCompile: ~prepareHandshakeDocument /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connect.js:128:34
+      1  100.0%            LazyCompile: ~performInitialHandshake /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connect.js:47:33
+      7    1.0%      LazyCompile: ~jsonParser /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/body-parser/lib/types/json.js:98:30
+      5   71.4%        LazyCompile: *handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      5  100.0%          LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      5  100.0%            LazyCompile: ~session /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express-session/index.js:179:26
+      2   28.6%        LazyCompile: ~handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      1   50.0%          LazyCompile: ~trim_prefix /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:288:23
+      1  100.0%            LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:275:64
+      1   50.0%          LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      1  100.0%            LazyCompile: ~session /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express-session/index.js:179:26
+      7    1.0%      LazyCompile: ~createSecureContext _tls_common.js:94:59
+      7  100.0%        LazyCompile: ~connect _tls_wrap.js:1581:35
+      7  100.0%          LazyCompile: ~makeConnection /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connect.js:227:24
+      7  100.0%            LazyCompile: ~connect /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connect.js:15:17
+      7    1.0%      LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/index.js:148:20
+      5   71.4%        LazyCompile: *handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      5  100.0%          LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+      5  100.0%            LazyCompile: ~dispatch /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:98:45
+      2   28.6%        LazyCompile: ~handle /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/layer.js:86:49
+      2  100.0%          LazyCompile: ~next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+      2  100.0%            LazyCompile: ~dispatch /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:98:45
+
+     97    6.7%  epoll_pwait
+
+     30    2.1%  __write
+     18   60.0%    /home/kevin/.nvm/versions/node/v14.17.6/bin/node
+      1    5.6%      LazyCompile: ~writeInt32LE internal/buffer.js:857:22
+      1  100.0%        LazyCompile: ~toBin /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/commands.js:496:10
+      1  100.0%          LazyCompile: ~writeCommand /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/message_stream.js:35:17
+      1  100.0%            LazyCompile: ~write /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connection.js:488:15
+      1    5.6%      LazyCompile: ~unrefActive internal/timers.js:315:21
+      1  100.0%        LazyCompile: ~Timeout.refresh internal/timers.js:208:37
+      1  100.0%          LazyCompile: ~_unrefTimer net.js:394:52
+      1  100.0%            LazyCompile: ~emitLookup net.js:1043:46
+      1    5.6%      LazyCompile: ~pbkdf2Sync internal/crypto/pbkdf2.js:44:20
+      1  100.0%        LazyCompile: ~HI /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/auth/scram.js:227:12
+      1  100.0%          LazyCompile: ~continueScramConversation /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/auth/scram.js:93:35
+      1  100.0%            LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/auth/scram.js:85:80
+      1    5.6%      LazyCompile: ~messageHandler /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connection.js:421:35
+      1  100.0%        LazyCompile: ~emit events.js:349:44
+      1  100.0%          LazyCompile: ~processIncomingData /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1  100.0%            LazyCompile: ~_write /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/message_stream.js:26:11
+      1    5.6%      LazyCompile: ~end _http_outgoing.js:795:45
+      1  100.0%        LazyCompile: ~end /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/compression/index.js:92:28
+      1  100.0%          LazyCompile: ~end /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express-session/index.js:250:27
+      1  100.0%            LazyCompile: ~send /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/response.js:107:25
+      1    5.6%      LazyCompile: ~end /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/compression/index.js:92:28
+      1  100.0%        LazyCompile: ~end /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express-session/index.js:250:27
+      1  100.0%          LazyCompile: ~send /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/response.js:107:25
+      1  100.0%            LazyCompile: ~json /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/response.js:239:25
+      1    5.6%      LazyCompile: ~compileForPublicLoader internal/bootstrap/loaders.js:220:25
+      1  100.0%        LazyCompile: ~loadNativeModule internal/modules/cjs/helpers.js:35:26
+      1  100.0%          LazyCompile: ~Module._load internal/modules/cjs/loader.js:724:24
+      1  100.0%            LazyCompile: ~Module.require internal/modules/cjs/loader.js:953:36
+      1    5.6%      LazyCompile: ~append internal/linkedlist.js:29:16
+      1  100.0%        LazyCompile: ~insert internal/timers.js:348:16
+      1  100.0%          LazyCompile: ~setUnrefTimeout internal/timers.js:370:25
+      1  100.0%            LazyCompile: ~setStreamTimeout internal/stream_base_commons.js:243:26
+      1    5.6%      LazyCompile: ~afterWriteTick internal/streams/writable.js:451:24
+      1  100.0%        LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:67:35
+      1    5.6%      LazyCompile: ~_copy buffer.js:208:15
+      1  100.0%        LazyCompile: ~copy buffer.js:767:16
+      1  100.0%          LazyCompile: ~serialize /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/bson/lib/bson.js:111:19
+      1  100.0%            LazyCompile: ~toBin /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/commands.js:82:10
+      1    5.6%      LazyCompile: ~_advanceClusterTime /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/common.js:50:29
+      1  100.0%        LazyCompile: ~serverUpdateHandler /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/topology.js:384:24
+      1  100.0%          LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/topology.js:560:53
+      1  100.0%            LazyCompile: ~emit events.js:349:44
+      1    5.6%      LazyCompile: ~Collection /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/collection.js:65:16
+      1  100.0%        LazyCompile: ~collection /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/db.js:182:15
+      1  100.0%          LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/connect-mongo/build/main/lib/MongoStore.js:124:42
+      1  100.0%            /home/kevin/.nvm/versions/node/v14.17.6/bin/node
+      1    5.6%      LazyCompile: ~<anonymous> _http_outgoing.js:549:45
+      1  100.0%        LazyCompile: ~hidden internal/errors.js:306:25
+      1  100.0%          LazyCompile: ~setHeader _http_outgoing.js:559:57
+      1  100.0%            LazyCompile: ~expressInit /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/middleware/init.js:29:30
+      1    5.6%      LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sessions.js:133:52
+      1  100.0%        LazyCompile: ~maybePromise /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/utils.js:482:22
+      1  100.0%          LazyCompile: ~endSession /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sessions.js:129:15
+      1  100.0%            LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/operations/execute_operation.js:47:70
+      1    5.6%      LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/operations/connect.js:84:31
+      1  100.0%        LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/topology.js:228:76
+      1  100.0%          LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connection_pool.js:266:27
+      1  100.0%            LazyCompile: ~handleOperationResult /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/server.js:322:42
+      1    5.6%      LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/auth/scram.js:152:83
+      1  100.0%        LazyCompile: ~messageHandler /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connection.js:421:35
+      1  100.0%          LazyCompile: ~emit events.js:349:44
+      1  100.0%            LazyCompile: ~processIncomingData /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1    5.6%      Eval: ~<anonymous> internal/bootstrap/node.js:1:1
+      1    5.6%      /home/kevin/.nvm/versions/node/v14.17.6/bin/node
+      1  100.0%        LazyCompile: ~isIPv6 internal/net.js:35:16
+      1  100.0%          LazyCompile: ~isIP internal/net.js:39:14
+      1  100.0%            LazyCompile: ~lookupAndConnect net.js:984:26
+
+     28    1.9%  /usr/lib/x86_64-linux-gnu/libc-2.31.so
+     19   67.9%    /home/kevin/.nvm/versions/node/v14.17.6/bin/node
+      3   15.8%      /home/kevin/.nvm/versions/node/v14.17.6/bin/node
+      1   33.3%        LazyCompile: ~updateRsFromPrimary /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/topology_description.js:276:29
+      1  100.0%          LazyCompile: ~update /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/topology_description.js:142:11
+      1  100.0%            LazyCompile: ~serverUpdateHandler /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/topology.js:384:24
+      1   33.3%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:257:21
+      1  100.0%          LazyCompile: ~readPackageScope internal/modules/cjs/loader.js:288:26
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1081:37
+      1   33.3%        LazyCompile: ~header /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/response.js:754:29
+      1  100.0%          LazyCompile: ~send /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/response.js:107:25
+      1  100.0%            LazyCompile: ~json /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/response.js:239:25
+      1    5.3%      LazyCompile: ~serializeInto /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%        LazyCompile: ~serializeObject /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/bson/lib/parser/serializer.js:258:25
+      1  100.0%          LazyCompile: ~serializeInto /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/bson/lib/parser/serializer.js:550:23
+      1  100.0%            LazyCompile: ~serialize /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/bson/lib/bson.js:111:19
+      1    5.3%      LazyCompile: ~resolve path.js:1067:10
+      1  100.0%        LazyCompile: ~readPackage internal/modules/cjs/loader.js:257:21
+      1  100.0%          LazyCompile: ~tryPackage internal/modules/cjs/loader.js:305:20
+      1  100.0%            LazyCompile: ~Module._findPath internal/modules/cjs/loader.js:461:28
+      1    5.3%      LazyCompile: ~parse /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/commands.js:384:10
+      1  100.0%        LazyCompile: ~messageHandler /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connection.js:421:35
+      1  100.0%          LazyCompile: ~emit events.js:349:44
+      1  100.0%            LazyCompile: ~processIncomingData /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1    5.3%      LazyCompile: ~depd /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/depd/index.js:105:15
+      1  100.0%        Eval: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/body-parser/index.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1026:37
+      1  100.0%            LazyCompile: ~Module._extensions..js internal/modules/cjs/loader.js:1081:37
+      1    5.3%      LazyCompile: ~create /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express-handlebars/dist/index.js:11:16
+      1  100.0%        LazyCompile: ~engine /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express-handlebars/dist/index.js:16:16
+      1  100.0%          Eval: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1026:37
+      1    5.3%      LazyCompile: ~connectionIsStale /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connection_pool.js:343:27
+      1  100.0%        LazyCompile: ~checkIn /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connection_pool.js:148:12
+      1  100.0%          LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connection_pool.js:266:27
+      1  100.0%            LazyCompile: ~handleOperationResult /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/server.js:322:42
+      1    5.3%      LazyCompile: ~configure /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/log4js/lib/appenders/file.js:108:19
+      1  100.0%        LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/log4js/lib/appenders/index.js:87:34
+      1  100.0%          LazyCompile: ~onlyOnMaster /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/log4js/lib/clustering.js:85:17
+      1  100.0%            LazyCompile: ~createAppender /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/log4js/lib/appenders/index.js:61:24
+      1    5.3%      LazyCompile: ~_write /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/message_stream.js:26:11
+      1  100.0%        LazyCompile: ~writeOrBuffer internal/streams/writable.js:334:23
+      1  100.0%          LazyCompile: ~Writable.write internal/streams/writable.js:258:36
+      1  100.0%            LazyCompile: ~ondata internal/streams/readable.js:724:18
+      1    5.3%      LazyCompile: ~_handles_method /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:58:59
+      1  100.0%        LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      1  100.0%          LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+      1  100.0%            LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+      1    5.3%      LazyCompile: ~WriteStream internal/fs/streams.js:230:21
+      1  100.0%        LazyCompile: ~WriteStream /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/graceful-fs/graceful-fs.js:301:24
+      1  100.0%          LazyCompile: ~createWriteStream /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/graceful-fs/graceful-fs.js:325:30
+      1  100.0%            LazyCompile: ~_renewWriteStream /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/streamroller/lib/RollingFileWriteStream.js:240:20
+      1    5.3%      LazyCompile: ~Hash internal/crypto/hash.js:37:14
+      1  100.0%        LazyCompile: ~createHash crypto.js:115:20
+      1  100.0%          LazyCompile: ~hash /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express-session/index.js:596:14
+      1  100.0%            LazyCompile: ~isModified /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express-session/index.js:425:24
+      1    5.3%      LazyCompile: ~<anonymous> internal/fs/utils.js:327:35
+      1  100.0%        LazyCompile: ~hidden internal/errors.js:306:25
+      1  100.0%          LazyCompile: ~<anonymous> internal/fs/utils.js:632:38
+      1  100.0%            LazyCompile: ~hidden internal/errors.js:306:25
+      1    5.3%      LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connect.js:16:29
+      1  100.0%        LazyCompile: ~callback /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connect.js:239:31
+      1  100.0%          LazyCompile: ~connectHandler /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connect.js:270:28
+      1  100.0%            LazyCompile: ~onceWrapper events.js:514:21
+      1    5.3%      LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/auth/scram.js:25:32
+      1  100.0%        LazyCompile: ~wrap.ondone internal/crypto/random.js:75:17
+      1    5.3%      LazyCompile: *setHeader _http_outgoing.js:559:57
+      1  100.0%        LazyCompile: ~header /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/response.js:754:29
+      1  100.0%          LazyCompile: ~send /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/response.js:107:25
+      1  100.0%            LazyCompile: ~json /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/response.js:239:25
+      1    5.3%      LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/index.js:176:16
+      1  100.0%        LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+      1  100.0%          LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+      1  100.0%            LazyCompile: *next /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/router/route.js:114:16
+
+     17    1.2%  fwrite
+     14   82.4%    /home/kevin/.nvm/versions/node/v14.17.6/bin/node
+      1    7.1%      LazyCompile: ~processWaitQueue /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connection_pool.js:417:26
+      1  100.0%        LazyCompile: ~processTicksAndRejections internal/process/task_queues.js:67:35
+      1    7.1%      LazyCompile: ~prepareMainThreadExecution internal/bootstrap/pre_execution.js:21:36
+      1  100.0%        Eval: ~<anonymous> internal/main/run_main_module.js:1:1
+      1    7.1%      LazyCompile: ~peek /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/utils.js:949:9
+      1  100.0%        LazyCompile: ~processIncomingData /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1  100.0%          LazyCompile: ~_write /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/message_stream.js:26:11
+      1  100.0%            LazyCompile: ~writeOrBuffer internal/streams/writable.js:334:23
+      1    7.1%      LazyCompile: ~messageHandler /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/connection.js:421:35
+      1  100.0%        LazyCompile: ~emit events.js:349:44
+      1  100.0%          LazyCompile: ~processIncomingData /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/message_stream.js:79:29
+      1  100.0%            LazyCompile: ~_write /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/cmap/message_stream.js:26:11
+      1    7.1%      LazyCompile: ~makeIndexSpec /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/operations/indexes.js:40:23
+      1  100.0%        LazyCompile: ~CreateIndexOperation /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/operations/indexes.js:120:16
+      1  100.0%          LazyCompile: ~createIndex /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/collection.js:255:16
+      1  100.0%            LazyCompile: ~setAutoRemove /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/connect-mongo/build/main/lib/MongoStore.js:138:18
+      1    7.1%      LazyCompile: ~lazyrouter /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/application.js:137:37
+      1  100.0%        LazyCompile: ~use /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/application.js:187:23
+      1  100.0%          Eval: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1026:37
+      1    7.1%      LazyCompile: ~isUserinfoPercentEncode /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/whatwg-url/lib/percent-encoding.js:76:33
+      1  100.0%        LazyCompile: ~utf8PercentEncodeCodePointInternal /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/whatwg-url/lib/percent-encoding.js:97:44
+      1  100.0%          LazyCompile: ~utf8PercentEncodeCodePoint /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/whatwg-url/lib/percent-encoding.js:112:36
+      1  100.0%            LazyCompile: ~parseAuthority /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/whatwg-url/lib/url-state-machine.js:731:71
+      1    7.1%      LazyCompile: ~init /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/application.js:57:25
+      1  100.0%        LazyCompile: ~createApplication /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/express/lib/express.js:37:27
+      1  100.0%          Eval: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/index.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile internal/modules/cjs/loader.js:1026:37
+      1    7.1%      LazyCompile: ~emit events.js:349:44
+      1  100.0%        LazyCompile: ~TLSSocket._finishInit _tls_wrap.js:910:43
+      1  100.0%          LazyCompile: ~ssl.onhandshakedone _tls_wrap.js:706:27
+      1    7.1%      LazyCompile: ~command /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/server.js:133:12
+      1  100.0%        LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/topology.js:220:106
+      1  100.0%          LazyCompile: ~processWaitQueue /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/topology.js:636:26
+      1  100.0%            LazyCompile: ~serverUpdateHandler /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/topology.js:384:24
+      1    7.1%      LazyCompile: ~checkServer /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/monitor.js:138:21
+      1  100.0%        LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/monitor.js:222:12
+      1  100.0%          LazyCompile: ~executeAndReschedule /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/utils.js:786:34
+      1  100.0%            LazyCompile: ~listOnTimeout internal/timers.js:505:25
+      1    7.1%      LazyCompile: ~Server /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/server.js:28:16
+      1  100.0%        LazyCompile: ~createAndConnectServer /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/topology.js:554:32
+      1  100.0%          LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/sdam/topology.js:580:52
+      1  100.0%            /home/kevin/.nvm/versions/node/v14.17.6/bin/node
+      1    7.1%      LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/streamroller/lib/fileNameFormatter.js:35:7
+      1  100.0%        /home/kevin/.nvm/versions/node/v14.17.6/bin/node
+      1  100.0%          LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/streamroller/lib/fileNameFormatter.js:32:10
+      1  100.0%            LazyCompile: ~RollingFileWriteStream /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/streamroller/lib/RollingFileWriteStream.js:31:14
+      1    7.1%      LazyCompile: ~<anonymous> /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/operations/execute_operation.js:17:48
+      1  100.0%        LazyCompile: ~maybePromise /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/utils.js:482:22
+      1  100.0%          LazyCompile: ~executeOperation /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/operations/execute_operation.js:12:26
+      1  100.0%            LazyCompile: ~createIndex /home/kevin/Documents/PROJECT/curso backend/compresion_logger_performance/compresion_logger_performance/node_modules/mongodb/lib/collection.js:255:16
+

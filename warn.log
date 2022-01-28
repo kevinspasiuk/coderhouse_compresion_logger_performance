@@ -1,0 +1,13 @@
+[2022-01-27T22:00:17.027] [ERROR] default - Error en servidor: Error: listen EADDRINUSE: address already in use :::8080
+[2022-01-27T22:01:18.363] [ERROR] default - Error en servidor: Error: listen EADDRINUSE: address already in use :::8080
+[2022-01-27T22:02:02.328] [ERROR] default - Error en servidor: Error: listen EADDRINUSE: address already in use :::8080
+[2022-01-27T22:02:13.349] [WARN] default - Not Found: GET a /socket.io/socket.io.js
+[2022-01-27T22:02:13.356] [WARN] default - Not Found: GET a /css/styles.css
+[2022-01-27T22:02:13.377] [WARN] default - Not Found: GET a /css/styles.css
+[2022-01-27T22:02:19.085] [WARN] default - Not Found: GET a /socket.io/socket.io.js
+[2022-01-27T22:02:19.086] [WARN] default - Not Found: GET a /css/styles.css
+[2022-01-27T22:02:19.109] [WARN] default - Not Found: GET a /css/styles.css
+[2022-01-27T22:05:33.998] [WARN] default - Not Found: GET a /socket.io/socket.io.js
+[2022-01-27T22:05:34.001] [WARN] default - Not Found: GET a /css/styles.css
+[2022-01-27T22:05:34.039] [WARN] default - Not Found: GET a /css/styles.css
+[2022-01-27T22:05:34.162] [WARN] default - Not Found: GET a /favicon.ico

@@ -3,6 +3,10 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const passport = require('passport');
 const parseArgs = require('minimist');
+const compression = require('compression')
+const logger = require('./utils/logger.js')
+
+
 const { Strategy: FacebookStrategy } = require('passport-facebook');
 const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true};
 
@@ -10,6 +14,7 @@ const args = parseArgs(process.argv.slice(2), {alias: {p: 'PUERTO', m: "MODO"} }
 const PORT = args.PUERTO || 8080
 const MODO = args.MODO || 'fork'
 const app = express();
+app.use(compression());
 
 const cluster = require('cluster')
 const numCPUs = require('os').cpus().length
@@ -17,15 +22,15 @@ const numCPUs = require('os').cpus().length
 /* --------------------------------------------------------------------------- */
 /* MASTER */
 if (cluster.isMaster && MODO == 'cluster') {
-  console.log(numCPUs)
-  console.log(`PID MASTER ${process.pid}`)
+  logger.info(numCPUs)
+  logger.info(`PID MASTER ${process.pid}`)
 
   for (let i = 0; i < numCPUs; i++) {
       cluster.fork()
   }
 
   cluster.on('exit', worker => {
-      console.log('Worker', worker.process.pid, 'died', new Date().toLocaleString())
+      logger.info('Worker', worker.process.pid, 'died', new Date().toLocaleString())
       cluster.fork()
   })
 }
@@ -85,8 +90,17 @@ else {
 
   // app.set('view engine', 'handlebars')
   app.use(express.static('public'));
+  app.use(express.static('views'));
   app.set('views', './views');
   app.use(express.urlencoded({ extended: true }));
+
+
+  /* Routes */
+
+  app.all('/*', function (req, res, next) {
+    logger.info(`Recibí ${req.method} a ${req.path}`);
+    next();
+  })
 
   app.get('/', function (req, res){
     if (req.isAuthenticated()) {
@@ -101,7 +115,6 @@ else {
   /* Old form login*/
   app.post('/login', (req, res) => {
 
-      console.log("Login! ", req.body.email )
       const username = req.body.email
       const password = req.body.password
 
@@ -134,6 +147,7 @@ else {
   })
 
   app.get('/info', (req, res) => {
+    
     res.send({info: {
       argumentos: process.argv,
       os: process.platform,
@@ -149,7 +163,16 @@ else {
   const randomRouter = require('./routes/random');
   app.use('/api/randoms',randomRouter)
 
-  app.listen(PORT, () => {
-    console.log(`[PID: ${process.pid}] Servidor express escuchando en el puerto ${PORT}`)
+
+  app.use((req, res, next) => {
+    res.status(404);
+    logger.warn(`Not Found: ${req.method} a ${req.path}`);
+    next();
   })
+
+  const server = app.listen(PORT, () => {
+    logger.info(`[PID: ${process.pid}] Servidor express escuchando en el puerto ${PORT}`)
+  })
+
+  server.on('error', error => logger.error(`Error en servidor: ${error}`))
 }

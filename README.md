@@ -1,4 +1,4 @@
-# Ejercicio Balanceo de Carga
+# Ejercicio gzip, logger y análisis de performance
 
 Este repositorio usa express y persiste las sesiones de usuarios en mongo atlas.
 También permite el login mediante Facebook.
@@ -11,202 +11,67 @@ $  node index.js -p {PORT_NUMBER} [-m cluster]
 Para selección del puerto mediante arg: -p {PORT_NUMBER}
 Para correr el server en modo cluster se debe agregar el argumento: -m cluster
 
-## Output del las diferentes invocaciones
+## Análisis
 
+### Compresión 
 
-### NODEMON
+Sin compresión, tamaño de respuesta de /api/randoms
 
+![alt text](./images/api_randoms_sin_compresion.png)
 
-$  nodemon index.js -p 8081 -m cluster
+Con compresión, tamaño de respuesta de /api/randoms
 
-```
-[nodemon] 2.0.12
-[nodemon] to restart at any time, enter `rs`
-[nodemon] watching path(s): *.*
-[nodemon] watching extensions: js,mjs,json
-[nodemon] starting `node index.js -p 8081 -m cluster`
-8
-PID MASTER 50476
-[PID: 50500] Servidor express escuchando en el puerto 8081
-[PID: 50488] Servidor express escuchando en el puerto 8081
-[PID: 50487] Servidor express escuchando en el puerto 8081
-[PID: 50494] Servidor express escuchando en el puerto 8081
-[PID: 50507] Servidor express escuchando en el puerto 8081
-[PID: 50528] Servidor express escuchando en el puerto 8081
-[PID: 50514] Servidor express escuchando en el puerto 8081
-[PID: 50517] Servidor express escuchando en el puerto 8081
-```
+![alt text](./images/api_randoms_con_compresion.png)
 
-$ ps -e|grep node
-```
-50456 pts/0    00:00:00 node
-50476 pts/0    00:00:00 node
-50487 pts/0    00:00:00 node
-50488 pts/0    00:00:00 node
-50494 pts/0    00:00:00 node
-50500 pts/0    00:00:00 node
-50507 pts/0    00:00:00 node
-50514 pts/0    00:00:00 node
-50517 pts/0    00:00:00 node
-50528 pts/0    00:00:00 node
-```
+### Profiling Nativo
 
-$ node index.js -p 8081 -m cluster
+Sin console log en /info
 
 ```
-PID MASTER 50889
-[PID: 50902] Servidor express escuchando en el puerto 8081
-[PID: 50903] Servidor express escuchando en el puerto 8081
-[PID: 50910] Servidor express escuchando en el puerto 8081
-[PID: 50896] Servidor express escuchando en el puerto 8081
-[PID: 50931] Servidor express escuchando en el puerto 8081
-[PID: 50924] Servidor express escuchando en el puerto 8081
-[PID: 50943] Servidor express escuchando en el puerto 8081
-[PID: 50916] Servidor express escuchando en el puerto 8081
-```
-
-$ ps -e|grep node
-
-```
-50889 pts/0    00:00:00 node
-50896 pts/0    00:00:00 node
-50902 pts/0    00:00:00 node
-50903 pts/0    00:00:00 node
-50910 pts/0    00:00:00 node
-50916 pts/0    00:00:00 node
-50924 pts/0    00:00:00 node
-50931 pts/0    00:00:00 node
-50943 pts/0    00:00:00 node
-```
-
-### FOREVER
-
-$ forever start index.js -p 8081 -m cluster
-
-$ forever list
-
-```
-info:    Forever processes running
-data:        uid  command                                          script                      forever pid   id logfile                       uptime       
-data:    [0] Sv6m /home/kevin/.nvm/versions/node/v14.17.6/bin/node index.js -p 8081 -m cluster 51369   51376    /home/kevin/.forever/Sv6m.log 0:0:0:21.265 
-```
-
-$ ps -e|grep node
-```
-  51369 ?        00:00:00 node
-  51376 ?        00:00:00 node
-  51383 ?        00:00:00 node
-  51389 ?        00:00:00 node
-  51390 ?        00:00:00 node
-  51397 ?        00:00:00 node
-  51403 ?        00:00:00 node
-  51410 ?        00:00:00 node
-  51418 ?        00:00:00 node
-  51425 ?        00:00:00 node
-```
-
-### PM2
-
-**Modo fork:**
-
-$ pm2 start index.js
-
-$  pm2 list
-
-![image info](./images/pm2_fork.png)
-
-**Modo cluster:**
-
-$ pm2 start index.js --watch -i max
-
-![image info](./images/pm2_cluster.png)
-
-## NGINX
-
-
-Configuración NGINX:
-
-**Config 1, ambos server en modo fork:**
-
-
-```
-$ pm2 start index.js -- --p=8080 
-$ pm2 start index.js -- --p=8081 
-```
-
-Se redirige las consultas a /api/randoms al puerto 8081, el resto al puerto 8080
-
-```
-upstream node_app {
-		server 127.0.0.1:8080;
-}
-
-upstream node_app_api_randoms {
-		server 127.0.0.1:8081;
-}
-
-server {
-	listen 80 default_server;
-	listen [::]:80 default_server;
-
-
-	root /var/www/nginx;
-
-	server_name _;
-
-	location /api/randoms {
-		proxy_pass http://node_app_api_randoms;
-	}
-
-	location / {
-		proxy_pass http://node_app;
-	}
-
-  }
-}
+ [Summary]:
+   ticks  total  nonlib   name
+     28    1.9%   12.9%  JavaScript
+    187   12.9%   86.2%  C++
+     41    2.8%   18.9%  GC
+   1235   85.1%          Shared libraries
+      2    0.1%          Unaccounted
 
 ```
 
-**Config 2, redirección /api/randoms en cluster gestionado por NGINX:**
+
+Con console log en /info
 
 ```
-$ pm2 start index.js -- --p=8080 
-$ pm2 start index.js -- --p=8081 
-$ pm2 start index.js -- --p=8082 
-$ pm2 start index.js -- --p=8083
-$ pm2 start index.js -- --p=8084
+ [Summary]:
+   ticks  total  nonlib   name
+     35    2.0%   16.4%  JavaScript
+    178   10.3%   83.2%  C++
+     77    4.5%   36.0%  GC
+   1511   87.6%          Shared libraries
 ```
 
-```
-upstream node_app {
-		server 127.0.0.1:8080;
-}
+El detalle compelto se encuentra en la ruta [./performance/profiling_nativo](./performance/profiling_nativo)
 
-upstream node_app_api_randoms {
-    server 127.0.0.1:8081;
-    server 127.0.0.1:8082;
-    server 127.0.0.1:8083;
-    server 127.0.0.1:8084;
-}
+### 0x con autocannon
 
-server {
-	listen 80 default_server;
-	listen [::]:80 default_server;
+**Sin console log en /info**
 
+Output de autocannon:
 
-	root /var/www/nginx;
+![alt text](./images/benchmark_sin_consolelog.png)
 
-	server_name _;
+Análisis de 0x
 
-	location /api/randoms {
-		proxy_pass http://node_app_api_randoms;
-	}
+![alt text](./images/0x_sin_consolelog.png)
 
-	location / {
-		proxy_pass http://node_app;
-	}
+**Con console log en /info**
 
-  }
-}
+Output de autocannon:
 
-```
+![alt text](./images/benchmark_con_consolelog.png)
+
+Análisis de 0x
+
+![alt text](./images/0x_con_consolelog.png)
+
+Los html se en encuentran en la ruta [./performance/0x](./performance/0x)
