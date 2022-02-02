@@ -11,7 +11,7 @@ const { Strategy: FacebookStrategy } = require('passport-facebook');
 const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true};
 
 const args = parseArgs(process.argv.slice(2), {alias: {p: 'PUERTO', m: "MODO"} });
-const PORT = args.PUERTO || 8080
+const PORT = process.env.PORT || args.PUERTO || 8080
 const MODO = args.MODO || 'fork'
 const app = express();
 app.use(compression());
