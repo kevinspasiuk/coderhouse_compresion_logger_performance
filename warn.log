@@ -11,3 +11,7 @@
 [2022-01-27T22:05:34.001] [WARN] default - Not Found: GET a /css/styles.css
 [2022-01-27T22:05:34.039] [WARN] default - Not Found: GET a /css/styles.css
 [2022-01-27T22:05:34.162] [WARN] default - Not Found: GET a /favicon.ico
+[2022-02-02T20:29:52.873] [WARN] default - Not Found: GET a /socket.io/socket.io.js
+[2022-02-02T20:29:52.879] [WARN] default - Not Found: GET a /css/styles.css
+[2022-02-02T20:29:52.932] [WARN] default - Not Found: GET a /css/styles.css
+[2022-02-02T20:29:53.108] [WARN] default - Not Found: GET a /favicon.ico
